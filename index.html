@@ -9,6 +9,21 @@
 	<div id="app">
 		<input type="text" name="nombre" placeholder="Ingresa tu nombre" v-model="nombre">
 		<p>Tu nombre en mayúsculas es: {{ nombre | uppercase }}</p>
+
+		<form>
+			<h2>Cursos favoritos</h2>
+
+			<input name="cursos" type="checkbox" id="vue" value="vue">
+			<label for="vue">Vue.js</label>
+
+			<input name="cursos" type="checkbox" id="react" value="react">
+			<label for="react">React</label>
+
+			<input name="cursos" type="checkbox" id="angular" value="angular">
+			<label for="angular">Angular</label>
+
+			<button type="submit">Enviar</button>
+		</form>
 	</div>
 	
 	<script src="https://unpkg.com/vue"></script>
