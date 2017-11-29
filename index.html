@@ -8,6 +8,7 @@
 <body>
 	<div id="app">
 		<input type="text" name="nombre" placeholder="Ingresa tu nombre">
+		<p>Tu nombre en mayúsculas es: {{ nombre | uppercase }}</p>
 	</div>
 	
 	<script src="https://unpkg.com/vue"></script>
@@ -15,6 +16,12 @@
 		let app = new Vue({
 			el: '#app',
 			data: {
+				nombre: ''
+			},
+			filters: {
+				uppercase: function(str){
+					return str.toUpperCase()
+				}
 			}
 		})
 	</script>
