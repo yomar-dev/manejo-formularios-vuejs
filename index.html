@@ -10,7 +10,7 @@
 		<input type="text" name="nombre" placeholder="Ingresa tu nombre" v-model="nombre">
 		<p>Tu nombre en mayúsculas es: {{ nombre | uppercase }}</p>
 
-		<form>
+		<form v-on:submit.prevent="submit">
 			<h2>Cursos favoritos</h2>
 
 			<input name="cursos" type="checkbox" id="vue" value="vue">
